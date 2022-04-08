@@ -3,7 +3,9 @@
     "express": "^4.17.3"
   },
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "prestart": "parcel build ./public/index.html",
+    "dev": "parcel serve ./public/index.html"
   },
   "name": "studbud-1",
   "description": "",
@@ -18,5 +20,9 @@
   "bugs": {
     "url": "https://github.com/AaronChater/studbud/issues"
   },
-  "homepage": "https://github.com/AaronChater/studbud#readme"
+  "homepage": "https://github.com/AaronChater/studbud#readme",
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.4.1",
+    "parcel": "^2.4.1"
+  }
 }
