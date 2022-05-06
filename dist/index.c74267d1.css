@@ -2,4 +2,34 @@ body, h1, h2 {
   color: green;
 }
 
+.container {
+  grid-template: "header header ." .3fr
+                 "marginLeft signup marginRight" 2.4fr
+                 "footer footer ." .3fr
+                 / .4fr 2.2fr .4fr;
+  grid-auto-flow: row;
+  gap: 0;
+  display: grid;
+}
+
+.footer {
+  grid-area: footer;
+}
+
+.header {
+  grid-area: header;
+}
+
+.marginLeft {
+  grid-area: marginLeft;
+}
+
+.marginRight {
+  grid-area: marginRight;
+}
+
+.signup {
+  grid-area: signup;
+}
+
 /*# sourceMappingURL=index.c74267d1.css.map */
