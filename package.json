@@ -5,12 +5,13 @@
   "scripts": {
     "start": "node server.js",
     "prestart": "parcel build ./public/index.html",
-    "dev": "parcel serve ./public/index.html"
+    "dev": "parcel serve ./public/index.html",
+    "main": "server.js"
   },
   "name": "studbud-1",
   "description": "",
   "version": "1.0.0",
-  "main": "server.js",
+
   "repository": {
     "type": "git",
     "url": "git+https://github.com/AaronChater/studbud.git"
