@@ -1,5 +1,6 @@
 
 //home page
+
 .container {
     height: 100vh;
     display: flex;
@@ -10,9 +11,74 @@
 
 .navbar {
     width: 367px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
 }
+
 
 .main {
     flex: 1;
     overflow-y: auto;
+}
+
+.headingBg{
+    height: 100px;
+    width: 170px;
+    text-align: center;
+    background-color: #9EB2F8;
+    border-radius: 15px;
+    margin-top: 30px;
+}
+
+
+
+
+#studbudIcon{
+    height: 100px;
+    width: 400px;
+}
+
+.pageTop{
+    height:150px;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.addGoal{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+background-color: blue;
+text-align: center; 
+font-size: 31px;  
+border-color: blue;
+height: 50px;
+border-radius: 15px;
+} 
+
+.typeGoal{
+height: 50px;
+    width:700px;
+    background-color: #EAEAEA; 
+    font-size: 31px; 
+    border: black;
+}
+
+.goalContainer{
+    display: flex;
+    align-items:center;
+    flex-direction: column;
+}
+
+.enteredGoals{
+    background-color: #EAEAEA; 
+    width: 600px; 
+    height: 500px; 
+    border-radius: 15px;
+    display: flex;
+    justify-content: center; 
 }
