@@ -1,64 +1,56 @@
-const form = document.getElementById("taskform");
-const button = document.querySelector("#taskform > button")
-var taskInput = document.getElementById("taskInput");
-var tasklist = document.getElementById("tasklist");
-
-var dueDateInput = document.getElementById("dueDateInput");
-var completionTimeInput = document.getElementById("completionTimeInput");
-var estimatedTimeInput = document.getElementById("estimatedTimeInput");
-var priorityInput = document.getElementById("priorityInput");
-
-form.addEventListener("submit", function(event){
-  event.preventDefault();
-  let task = taskInput.value;
-  let dueDate = dueDateInput.value;
-  let completionTime = completionTimeInput.value;
-  let estimatedTime = estimatedTimeInput.value;
-  let priorityRating = priorityInput.options[priorityInput.selectedIndex].value;
-  addTask(task, dueDate, estimatedTime, priorityRating, completionTime, false);
-  console.log(taskList);
-})
-
-var taskListArray = [];
-
-function addTask(taskDescription, dueDate, estimatedTime, priorityRating, completionTime, completionStatus) {
-  let d = new Date();
-  let dateCreated = d.getFullYear();
-  let task = {
-    taskDescription,
-    dueDate,
-    dateCreated,
-    estimatedTime,
-    completionTime,
-    priorityRating,
-    estimatedTime,
-    completionStatus
-  };
-  taskListArray.push(task);
-  renderTask(task);
+//javascript for goal list//
+// Create a "close" button and append it to each list item
+var myNodelist = document.getElementsByTagName("LI");
+var i;
+for (i = 0; i < myNodelist.length; i++) {
+  var span = document.createElement("SPAN");
+  var txt = document.createTextNode("\u00D7");
+  span.className = "close";
+  span.appendChild(txt);
+  myNodelist[i].appendChild(span);
 }
 
-function renderTask(task){
-  // Create HTML elements
-  let item = document.createElement("li");
-  item.innerHTML = "<p>" + task.taskDescription + "</p>";
+// Click on a close button to hide the current list item
+var close = document.getElementsByClassName("close");
+var i;
+for (i = 0; i < close.length; i++) {
+  close[i].onclick = function() {
+    var div = this.parentElement;
+    div.style.display = "none";
+  }
+}
 
-  tasklist.appendChild(item);
+// Add a "checked" symbol when clicking on a list item
+var list = document.querySelector('ul');
+list.addEventListener('click', function(ev) {
+  if (ev.target.tagName === 'LI') {
+    ev.target.classList.toggle('checked');
+  }
+}, false);
 
-  // Extra Task DOM elements
-  let delButton = document.createElement("button");
-  let delButtonText = document.createTextNode("Delete Task");
-  delButton.appendChild(delButtonText);
-  item.appendChild(delButton);
+// Create a new list item when clicking on the "Add" button
+function newElement() {
+  var li = document.createElement("li");
+  var inputValue = document.getElementById("myInput").value;
+  var t = document.createTextNode(inputValue);
+  li.appendChild(t);
+  if (inputValue === '') {
+    alert("You must write something!");
+  } else {
+    document.getElementById("myUL").appendChild(li);
+  }
+  document.getElementById("myInput").value = "";
 
+  var span = document.createElement("SPAN");
+  var txt = document.createTextNode("\u00D7");
+  span.className = "close";
+  span.appendChild(txt);
+  li.appendChild(span);
 
-  // Event Listeners for DOM elements
-  delButton.addEventListener("click", function(event){
-    event.preventDefault();
-    item.remove();
-  })
-
-
-  // Clear the input form
-  form.reset();
+  for (i = 0; i < close.length; i++) {
+    close[i].onclick = function() {
+      var div = this.parentElement;
+      div.style.display = "none";
+    }
+  }
 }
