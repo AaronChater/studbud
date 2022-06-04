@@ -5,14 +5,32 @@ $lightGreen: #72E59A;
 
 
 
-.stopwatch {
-    display: grid;
-    justify-items: center;
-    grid-row-gap: 23px;
-    width: 100%;
-    padding-top: 25px;
+/*.stopwatch {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 85%;
+    margin: 5% 10% 5% 10%;
+    padding-top: 2%;
+    padding-bottom: 2%;
     background-color: $lightGrey;
+    border-radius: 15px;
+  }*/
+
+  .stopwatch {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 85%;
+    margin: 5% 10% 5% 10%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    background-color: $lightGrey;
+    border-radius: 15px;
   }
+
   
   .circle {
     display: flex;
@@ -24,6 +42,7 @@ $lightGreen: #72E59A;
   
     border: 2px solid;
     border-radius: 50%;
+    margin-bottom: 2%;
   }
   
   .time {
@@ -36,8 +55,8 @@ $lightGreen: #72E59A;
   .controls {
     display: flex;
     justify-content: space-between;
-  align-items: center;
-    //width: 187px;
+ align-items: center;
+width: 350px;
   }
   
   button {
@@ -50,7 +69,6 @@ $lightGreen: #72E59A;
   }
   
   #playButton {
-    display: block;
     width: 137px;
     height: 60px;
   }
@@ -70,4 +88,10 @@ $lightGreen: #72E59A;
       border-radius: 15px;
   }
 
-  
+  /*#timers{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      width: 100%;
+      background-color: #72E59A;
+  }*/
