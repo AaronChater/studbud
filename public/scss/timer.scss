@@ -1,8 +1,43 @@
-.controls {
+$lightBlue: #9EB2F8;
+$darkBlue: #3560FA;
+$lightGrey: #EAEAEA;
+$lightGreen: #72E59A;
+
+
+
+.stopwatch {
+    display: grid;
+    justify-items: center;
+    grid-row-gap: 23px;
+    width: 100%;
+    padding-top: 25px;
+    background-color: $lightGrey;
+  }
+  
+  .circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  background-color: $lightGreen;
+    height: 270px;
+    width: 270px;
+  
+    border: 2px solid;
+    border-radius: 50%;
+  }
+  
+  .time {
+    font-weight: 300;
+    font-size: 48px;
+  }
+  
+
+  
+  .controls {
     display: flex;
     justify-content: space-between;
-  
-    width: 187px;
+  align-items: center;
+    //width: 187px;
   }
   
   button {
@@ -16,8 +51,23 @@
   
   #playButton {
     display: block;
+    width: 137px;
+    height: 60px;
   }
   
   #pauseButton {
     display: none;
+    width: 150px;
+    height: 60px;
   }
+
+  #resetButton{
+      width: 150px;
+      height: 60px;
+  }
+
+  #playButton, #pauseButton, #resetButton{
+      border-radius: 15px;
+  }
+
+  
