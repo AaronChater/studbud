@@ -19,7 +19,7 @@
 
 
 .main {
-    background-color: green;
+    background-color: white;
     flex: 1;
     overflow-y: auto;
 }
@@ -27,10 +27,13 @@
 .headingBg{
     height: 100px;
     width: 170px;
+    display: flex;
     text-align: center;
+    justify-content: center;
+    align-items: center;
     background-color: #9EB2F8;
     border-radius: 15px;
-    margin-top: 30px;
+    margin-top: 20px;
 }
 
 
@@ -39,6 +42,7 @@
 #studbudIcon{
     height: 100px;
     width: 400px;
+    margin-top: 20px;
 }
 
 .pageTop{

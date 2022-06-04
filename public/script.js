@@ -1,3 +1,5 @@
+
+
 //javascript for goal list//
 // Create a "close" button and append it to each list item
 var myNodelist = document.getElementsByTagName("LI");
@@ -58,6 +60,8 @@ function newElement() {
 
 
 
+
+
 //javascript for task list
 //code from week 5 interactive task list
 // Setting up variables for our HTML elements using DOM selection
@@ -74,7 +78,7 @@ button.addEventListener("click", function(event) {
   //let task = form.elements.task.value; // could be swapped out for line below
   let task = taskInput.value;
 let dueDate = dueDateInput.value;
-  let completionTime = completionTimeInput.value;
+
   let estimatedTime = estimatedTimeInput.value;
   let priorityRating = priorityInput.options[priorityInput.selectedIndex].value;
 
@@ -85,7 +89,7 @@ let dueDate = dueDateInput.value;
   //addTask(task, date, "26/03/2021", "Low", ["1", "30"], false);
 
 
-    addTask(task, dueDate, completionTime, estimatedTime, priorityRating);
+    addTask(task, dueDate, estimatedTime, priorityRating);
   // Log out the newly populated taskList everytime the button has been pressed
   console.log(taskList);
 })
@@ -93,11 +97,10 @@ let dueDate = dueDateInput.value;
 // Create an empty array to store our tasks
 var taskList = [];
 
-function addTask(taskDescription, createdDate, completionTime, estimatedTime, priorityRating, completionStatus) {
+function addTask(taskDescription, createdDate, estimatedTime, priorityRating, completionStatus) {
   let task = {
     taskDescription,
     createdDate,
-    completionTime,
     estimatedTime,
     priorityRating,
     completionStatus
@@ -115,10 +118,9 @@ function addTask(taskDescription, createdDate, completionTime, estimatedTime, pr
 function renderTask(task) {
   let item = document.createElement("li");
   item.innerHTML ="<p>" + task.taskDescription +"</p>"
-    + "<p>" + task.createdDate +"</p>"
-    + "<p>" + task.completionTime +"</p>"
-    + "<p>" + task.estimatedTime +"</p>"
-    + "<p>" + task.priorityRating +"</p>";
+     + "<p>" + "DueDate:   " + task.createdDate +"</p>"
+    + "<p>" + "Estimated time:   "  + task.estimatedTime +"</p>"
+    + "<p>"  + "Priority:   " + task.priorityRating +"</p>";
 
   tasklist.appendChild(item);
 
@@ -137,4 +139,6 @@ function renderTask(task) {
   // Clear the value of the input once the task has been added to the page
   form.reset();
 }
+
+
 

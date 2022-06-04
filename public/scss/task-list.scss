@@ -1,39 +1,112 @@
 
 
-
+*{
+    box-sizing: border-box;
+  }
 #taskform{
     display:flex;
     flex-direction: column;
     align-items: center;
-}
-#taskform label{
+    background-color: $lightBlue;
+    padding: 20px;
+    margin: 20px 100px 20px 100px;
+    border-radius: 15px;
+
+    h2{
+        margin: 0px 0px 10px 0px;
+    }
+
+    button{
+        margin-top: 30px;
+    }
+
+label{
     color: black;
     font-size: 20px;
     margin-bottom: 5px;
     font-weight: bold;
 }
 
-#taskform input{
+input{
 width: 300px;
-margin-bottom: 0px;
-
+margin-bottom: 10px;
 }
 
-#taskform button, #priorityInput{
+   }
+
+
+button, #priorityInput {
     padding: 10px;
     width: 170px;
-    margin-left: 20px;
     background: white;
     color: #1c1c1c;
-    float: left;
+    align-self:center;
     text-align: center;
     font-size: 20px;
     cursor: pointer;
     transition: 0.2s;
     border-radius: 10px;
+    margin-top: 0px;
+    margin-bottom: 0px;
 
     &:hover{
         background-color: #3560FA;
         color: white;
-    }
+    }    
 }
+
+
+
+
+
+#tasklist{
+    //margin-left: 50px;
+    //margin-right: 50px;
+    padding: 0;
+    height: 500px;
+    overflow-y: scroll;
+    font-size: 60px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: $lightGrey;
+    margin: 20px;
+    border-radius: 15px;
+
+}
+
+#tasklist li{
+   display: flex;
+   flex-direction: column;
+    padding: 12px 8px 12px 40px;
+    margin-top: 20px;
+margin-right: 20px;
+margin-left: 20px;
+    border-radius: 15px;
+    background: white;
+    transition: 0.2s;
+    width: 300px;
+    height: 229px;
+}
+
+#tasklist li p{
+    margin-top: 1px;
+    margin-bottom: 1px;
+    font-weight: bold;
+    text-align: center;
+    font-size: 20px;
+}
+
+
+.taskboxColour{
+    height: 20px;
+    width: 20px;
+    background-color: red;
+}
+
+#tasklist button{
+        margin-top: 75px;
+
+}
+
