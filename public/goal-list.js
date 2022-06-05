@@ -1,5 +1,7 @@
 //javascript for goal list//
-// Create a "close" button and append it to each list item
+//code referenced from https://www.w3schools.com/howto/howto_js_todolist.asp
+
+// Close button for each item
 var myNodelist = document.getElementsByTagName("LI");
 var i;
 for (i = 0; i < myNodelist.length; i++) {
@@ -10,7 +12,7 @@ for (i = 0; i < myNodelist.length; i++) {
   myNodelist[i].appendChild(span);
 }
 
-// Click on a close button to hide the current list item
+// hiding content with close button
 var close = document.getElementsByClassName("close");
 var i;
 for (i = 0; i < close.length; i++) {
@@ -20,7 +22,7 @@ for (i = 0; i < close.length; i++) {
   }
 }
 
-// Add a "checked" symbol when clicking on a list item
+// Add a tick when goal is clicked to indicate completion
 var list = document.querySelector('ul');
 list.addEventListener('click', function(ev) {
   if (ev.target.tagName === 'LI') {

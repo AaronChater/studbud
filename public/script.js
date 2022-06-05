@@ -59,12 +59,8 @@ function newElement() {
 }
 
 
-
-
-
-
 //javascript for task list
-//code from week 5 interactive task list
+
 // Setting up variables for our HTML elements using DOM selection
 const form = document.getElementById("taskform");
 const button = document.querySelector("#taskform > button"); // Complex CSS query

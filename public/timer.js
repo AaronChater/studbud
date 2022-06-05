@@ -1,6 +1,7 @@
 //timer javascript
-// Convert time to a format of hours, minutes, seconds, and milliseconds
+// code reference: https://tinloof.com/blog/how-to-build-a-stopwatch-with-html-css-js-react-part-2
 
+// Convert time to a format of hours, minutes, seconds
 function timeToString(time) {
   let diffInHrs = time / 3600000;
   let hh = Math.floor(diffInHrs);
@@ -17,20 +18,17 @@ function timeToString(time) {
   return `${formattedMM}:${formattedSS}`;
 }
 
-// Declare variables to use in our functions below
-
+// Declare variables 
 let startTime;
 let elapsedTime = 0;
 let timerInterval;
 
 // Create function to modify innerHTML
-
 function print(txt) {
   document.getElementById("display").innerHTML = txt;
 }
 
 // Create "start", "pause" and "reset" functions
-
 function start() {
   startTime = Date.now() - elapsedTime;
   timerInterval = setInterval(function printTime() {
@@ -52,16 +50,15 @@ function reset() {
   showButton("PLAY");
 }
 
-// Create function to display buttons
-
+//function to display buttons
 function showButton(buttonKey) {
   const buttonToShow = buttonKey === "PLAY" ? playButton : pauseButton;
   const buttonToHide = buttonKey === "PLAY" ? pauseButton : playButton;
   buttonToShow.style.display = "block";
   buttonToHide.style.display = "none";
 }
-// Create event listeners
 
+//event listeners
 let playButton = document.getElementById("playButton");
 let pauseButton = document.getElementById("pauseButton");
 let resetButton = document.getElementById("resetButton");
