@@ -1,0 +1,29 @@
+{
+  "dependencies": {
+    "express": "^4.17.3"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "prestart": "parcel build ./public/index.html",
+    "dev": "parcel serve ./public/index.html",
+    "main": "server.js"
+  },
+  "name": "studbud-1",
+  "description": "",
+  "version": "1.0.0",
+
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AaronChater/studbud.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AaronChater/studbud/issues"
+  },
+  "homepage": "https://github.com/AaronChater/studbud#readme",
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.4.1",
+    "parcel": "^2.4.1"
+  }
+}

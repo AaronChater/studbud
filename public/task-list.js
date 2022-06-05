@@ -1,7 +1,5 @@
 
-
 //javascript for task list
-
 const form = document.getElementById("taskform");
 const button = document.querySelector("#taskform > button"); 
 const tasklist = document.getElementById("tasklist");
